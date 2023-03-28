@@ -1,0 +1,34 @@
+Jednoręki Bandyta
+Twoim zadaniem jest zaprogramowanie automatu do gry.
+
+Ma on trzy stany:
+
+Brak monety
+
+Moneta włożona
+
+Wygrana/Przegrana
+
+Oraz akcje:
+
+Włóż monetę
+
+Pociągnij dźwignię
+
+Zabierz wygraną (opcjonalnie)
+
+Wypisz aktualny stan
+
+Stan Brak monety przechodzi po akcji Włóż monetę w stan Moneta włożona.
+
+Stan Moneta włożona zmienia się po akcji Pociągnij dźwignię. Wówczas mamy 20% szansy na wygraną.
+
+W przypadku przegranej przechodzimy w stan Brak monety
+
+W przypadku wygranej przechodzimy w stan Wygrana
+
+Stan Wygrana przechodzi po akcji Zabierz wygraną w stan Brak monety
+
+Dodatkowo każdy stan obsługuję metodę Wypisz aktualny stan, który wypisuję na standardowe wyjście informację o stanie w jakim aktualnie znajduje się automat.
+
+Powodzenia!

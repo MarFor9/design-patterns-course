@@ -1,0 +1,36 @@
+Silnik gry
+Twoim zadaniem będzie własnoręczne zakodowanie wzorca Singleton na przykładzie prostej gry w zgadywanie liczb.
+
+W każdej rundzie program losuje cyfrę z przedziału 0-9, gracz natomiast ma za zadanie ją odgadnąć. Za każdą poprawną odpowiedź gracz otrzymuje punkt. Rozgrywka trwa dziesięć rund.
+
+Cała ta funkcjonalność powinna zamknąć się w klasie GuessGame, w metodzie  play(). Dodatkowo klasa powinna mieć metodę  getScore(), zwracającą punkty z aktualnej rozgrywki.
+
+Klasa GuessGame  ma być Singletonem, wykorzystaj więc wiedzę z tego rozdziału i pamiętaj o obsłudze wielowątkowości oraz serializacji.
+
+Jeśli wszystko Ci się powiedzie, wywołanie:
+
+public class App {
+  public static void main(String[] args) {
+   GuessGame game = GuessGame.getInstance();
+
+   game.play();
+
+   int score = game.getScore();
+
+   GuessGame anotherGameReference = GuessGame.getInstance();
+
+   if(game == anotherGameReference  ) {
+    System.out.println("Singleton!");
+    if(score == anotherGameReference.getScore()) {
+     System.out.println("I punkty się zgadzają!");
+    }
+   }
+  }
+}
+powinno rozpocząć grę, a następnie wypisać na zakończenie:
+
+Singleton!
+I punkty się zgadzają!
+
+
+Powodzenia!
